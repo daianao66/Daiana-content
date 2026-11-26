@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daiana — Your Next Move</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --bg-page: #faf8f5;
+      --text-main: #181715;
+      --text-muted: #5e5a54;
+      --text-subtle: #8c857b;
+      --accent-display: #9c7a44;
+      --accent-glow: rgba(184, 146, 86, 0.22);
+      --btn-bg: #1c1a17;
+      --btn-hover: #332f2a;
+      --btn-text: #faf8f5;
+      --pill-active-bg: #efe9df;
+      --pill-active-text: #8a6936;
+      --border-soft: rgba(24, 23, 21, 0.1);
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      transition: background-color 0.35s ease, color 0.35s ease;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .hero-headline {
+      color: var(--accent-display);
+      text-shadow: 0 18px 48px var(--accent-glow);
+      transition: color 0.35s ease, text-shadow 0.35s ease;
+    }
+
+    .ambient-glow {
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      transition: background 0.35s ease;
+    }
+
+    .cta-btn {
+      background-color: var(--btn-bg);
+      color: var(--btn-text);
+      transition: background-color 0.25s ease, transform 0.15s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: var(--btn-hover);
+    }
+
+    .cta-btn:active {
+      transform: scale(0.98);
+    }
+
+    .pill-nav-link.active {
+      background-color: var(--pill-active-bg);
+      color: var(--pill-active-text);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="min-h-screen pb-32 selection:bg-stone-300 selection:text-stone-900">
+  <!-- Main Mobile-First Container -->
+  <div class="mx-auto max-w-md px-6 pt-6">
+    <!-- Top Header -->
+    <header class="flex items-center justify-between py-2">
+      <a href="#start" class="flex items-center gap-2.5">
+        <span
+          class="flex h-7 w-7 items-center justify-center rounded-full text-sm font-bold tracking-tight"
+          style="background-color: var(--btn-bg); color: var(--btn-text);"
+        >
+          D
+        </span>
+        <span class="text-base font-semibold tracking-tight">Daiana</span>
+      </a>
+
+      <div class="flex items-center gap-2.5">
+        <!-- Subtle Theme Switcher Swatches -->
+        <div
+          class="flex items-center gap-1.5 rounded-full border px-2 py-1"
+          style="border-color: var(--border-soft); background-color: rgba(255,255,255,0.6);"
+          aria-label="Color palette selector"
+        >
+          <button
+            type="button"
+            onclick="setTheme('champagne')"
+            title="Warm Champagne & Noir"
+            class="h-3.5 w-3.5 rounded-full border border-black/15 transition-transform hover:scale-110"
+            style="background: linear-gradient(135deg, #9c7a44 50%, #1c1a17 50%);"
+          ></button>
+          <button
+            type="button"
+            onclick="setTheme('emerald')"
+            title="Emerald & Cream"
+            class="h-3.5 w-3.5 rounded-full border border-black/15 transition-transform hover:scale-110"
+            style="background: linear-gradient(135deg, #1b4d3e 50%, #c5a059 50%);"
+          ></button>
+          <button
+            type="button"
+            onclick="setTheme('blush')"
+            title="Blush Rose & Espresso"
+            class="h-3.5 w-3.5 rounded-full border border-black/15 transition-transform hover:scale-110"
+            style="background: linear-gradient(135deg, #8e4a55 50%, #2d1e20 50%);"
+          ></button>
+        </div>
+
+        <a
+          href="#"
+          data-external-cta
+          class="rounded-full border px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] transition-colors hover:bg-black/5"
+          style="border-color: var(--border-soft); color: var(--text-subtle);"
+        >
+          LET'S TALK
+        </a>
+      </div>
+    </header>
+
+    <!-- Section 01: Hero / Start -->
+    <section id="start" class="relative pt-12 pb-16">
+      <!-- Ambient Background Glow -->
+      <div
+        class="ambient-glow pointer-events-none absolute top-16 left-4 -z-10 h-64 w-64 rounded-full blur-2xl"
+      ></div>
+
+      <!-- Kicker -->
+      <div class="mb-6 flex items-center gap-2">
+        <span
+          class="h-1.5 w-1.5 rounded-full"
+          style="background-color: var(--accent-display);"
+        ></span>
+        <span
+          class="text-[11px] font-semibold uppercase tracking-[0.16em]"
+          style="color: var(--text-subtle);"
+        >
+          A CONVERSATION IS A PLACE TO START
+        </span>
+      </div>
+
+      <!-- Large Display Headline -->
+      <h1 class="hero-headline mb-7 text-[3.65rem] font-bold leading-[0.98] tracking-[-0.035em]">
+        Your next<br />move.
+      </h1>
+
+      <!-- Pitch Copy -->
+      <p
+        class="mb-9 text-[1.05rem] leading-[1.6] font-normal"
+        style="color: var(--text-main);"
+      >
+        Interested in building a business in financial services? Tell me a little
+        about yourself, and let’s talk about the opportunity! Must be 18 years or
+        older, eligible to work in the U.S. and able to pass a background check.
+      </p>
+
+      <!-- Primary Pill CTA -->
+      <div class="mb-7">
+        <a
+          href="#"
+          data-external-cta
+          class="cta-btn
